@@ -16,6 +16,9 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    mainView = [[MainView alloc]initWithNibName:nil bundle:nil];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
