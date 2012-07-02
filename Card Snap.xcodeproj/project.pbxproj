@@ -13,6 +13,10 @@
 		1629405915A264BF00E4A8C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1629405715A264BF00E4A8C4 /* InfoPlist.strings */; };
 		1629405B15A264BF00E4A8C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629405A15A264BF00E4A8C4 /* main.m */; };
 		1629405F15A264BF00E4A8C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629405E15A264BF00E4A8C4 /* AppDelegate.m */; };
+		1629406815A2659C00E4A8C4 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629406615A2659C00E4A8C4 /* MainView.m */; };
+		1629406915A2659C00E4A8C4 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1629406715A2659C00E4A8C4 /* MainView.xib */; };
+		1629406D15A2670300E4A8C4 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629406B15A2670300E4A8C4 /* Card.m */; };
+		1629406E15A2670300E4A8C4 /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1629406C15A2670300E4A8C4 /* Card.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +24,18 @@
 		1629404E15A264BE00E4A8C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1629405015A264BE00E4A8C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1629405215A264BE00E4A8C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1629405615A264BF00E4A8C4 /* Card Snap-Info.plist */ = {isa = PBXFileReference; path = "Card Snap-Info.plist"; sourceTree = "<group>"; };
+		1629405615A264BF00E4A8C4 /* Card Snap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Card Snap-Info.plist"; sourceTree = "<group>"; };
 		1629405815A264BF00E4A8C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1629405A15A264BF00E4A8C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1629405C15A264BF00E4A8C4 /* Card Snap-Prefix.pch */ = {isa = PBXFileReference; path = "Card Snap-Prefix.pch"; sourceTree = "<group>"; };
-		1629405D15A264BF00E4A8C4 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1629405C15A264BF00E4A8C4 /* Card Snap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Card Snap-Prefix.pch"; sourceTree = "<group>"; };
+		1629405D15A264BF00E4A8C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1629405E15A264BF00E4A8C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1629406515A2659C00E4A8C4 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		1629406615A2659C00E4A8C4 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		1629406715A2659C00E4A8C4 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		1629406A15A2670300E4A8C4 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		1629406B15A2670300E4A8C4 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		1629406C15A2670300E4A8C4 /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +82,15 @@
 		1629405415A264BE00E4A8C4 /* Card Snap */ = {
 			isa = PBXGroup;
 			children = (
+				1629406A15A2670300E4A8C4 /* Card.h */,
+				1629406B15A2670300E4A8C4 /* Card.m */,
+				1629406C15A2670300E4A8C4 /* Card.xib */,
 				1629405D15A264BF00E4A8C4 /* AppDelegate.h */,
 				1629405E15A264BF00E4A8C4 /* AppDelegate.m */,
 				1629405515A264BF00E4A8C4 /* Supporting Files */,
+				1629406515A2659C00E4A8C4 /* MainView.h */,
+				1629406615A2659C00E4A8C4 /* MainView.m */,
+				1629406715A2659C00E4A8C4 /* MainView.xib */,
 			);
 			path = "Card Snap";
 			sourceTree = "<group>";
@@ -141,6 +157,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1629405915A264BF00E4A8C4 /* InfoPlist.strings in Resources */,
+				1629406915A2659C00E4A8C4 /* MainView.xib in Resources */,
+				1629406E15A2670300E4A8C4 /* Card.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +171,8 @@
 			files = (
 				1629405B15A264BF00E4A8C4 /* main.m in Sources */,
 				1629405F15A264BF00E4A8C4 /* AppDelegate.m in Sources */,
+				1629406815A2659C00E4A8C4 /* MainView.m in Sources */,
+				1629406D15A2670300E4A8C4 /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
