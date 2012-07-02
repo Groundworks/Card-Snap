@@ -19,6 +19,7 @@
     
     mainView = [[MainView alloc]initWithNibName:nil bundle:nil];
     
+    [self.window setRootViewController:mainView];
     [self.window makeKeyAndVisible];
     return YES;
 }
