@@ -1,0 +1,263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1629404F15A264BE00E4A8C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1629404E15A264BE00E4A8C4 /* UIKit.framework */; };
+		1629405115A264BE00E4A8C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1629405015A264BE00E4A8C4 /* Foundation.framework */; };
+		1629405315A264BE00E4A8C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1629405215A264BE00E4A8C4 /* CoreGraphics.framework */; };
+		1629405915A264BF00E4A8C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1629405715A264BF00E4A8C4 /* InfoPlist.strings */; };
+		1629405B15A264BF00E4A8C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629405A15A264BF00E4A8C4 /* main.m */; };
+		1629405F15A264BF00E4A8C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1629405E15A264BF00E4A8C4 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1629404A15A264BE00E4A8C4 /* Card Snap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Snap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1629404E15A264BE00E4A8C4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1629405015A264BE00E4A8C4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1629405215A264BE00E4A8C4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1629405615A264BF00E4A8C4 /* Card Snap-Info.plist */ = {isa = PBXFileReference; path = "Card Snap-Info.plist"; sourceTree = "<group>"; };
+		1629405815A264BF00E4A8C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1629405A15A264BF00E4A8C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1629405C15A264BF00E4A8C4 /* Card Snap-Prefix.pch */ = {isa = PBXFileReference; path = "Card Snap-Prefix.pch"; sourceTree = "<group>"; };
+		1629405D15A264BF00E4A8C4 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1629405E15A264BF00E4A8C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1629404715A264BE00E4A8C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1629404F15A264BE00E4A8C4 /* UIKit.framework in Frameworks */,
+				1629405115A264BE00E4A8C4 /* Foundation.framework in Frameworks */,
+				1629405315A264BE00E4A8C4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1629403F15A264BE00E4A8C4 = {
+			isa = PBXGroup;
+			children = (
+				1629405415A264BE00E4A8C4 /* Card Snap */,
+				1629404D15A264BE00E4A8C4 /* Frameworks */,
+				1629404B15A264BE00E4A8C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1629404B15A264BE00E4A8C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1629404A15A264BE00E4A8C4 /* Card Snap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1629404D15A264BE00E4A8C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1629404E15A264BE00E4A8C4 /* UIKit.framework */,
+				1629405015A264BE00E4A8C4 /* Foundation.framework */,
+				1629405215A264BE00E4A8C4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1629405415A264BE00E4A8C4 /* Card Snap */ = {
+			isa = PBXGroup;
+			children = (
+				1629405D15A264BF00E4A8C4 /* AppDelegate.h */,
+				1629405E15A264BF00E4A8C4 /* AppDelegate.m */,
+				1629405515A264BF00E4A8C4 /* Supporting Files */,
+			);
+			path = "Card Snap";
+			sourceTree = "<group>";
+		};
+		1629405515A264BF00E4A8C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1629405615A264BF00E4A8C4 /* Card Snap-Info.plist */,
+				1629405715A264BF00E4A8C4 /* InfoPlist.strings */,
+				1629405A15A264BF00E4A8C4 /* main.m */,
+				1629405C15A264BF00E4A8C4 /* Card Snap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1629404915A264BE00E4A8C4 /* Card Snap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1629406215A264BF00E4A8C4 /* Build configuration list for PBXNativeTarget "Card Snap" */;
+			buildPhases = (
+				1629404615A264BE00E4A8C4 /* Sources */,
+				1629404715A264BE00E4A8C4 /* Frameworks */,
+				1629404815A264BE00E4A8C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Card Snap";
+			productName = "Card Snap";
+			productReference = 1629404A15A264BE00E4A8C4 /* Card Snap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1629404115A264BE00E4A8C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 1629404415A264BE00E4A8C4 /* Build configuration list for PBXProject "Card Snap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1629403F15A264BE00E4A8C4;
+			productRefGroup = 1629404B15A264BE00E4A8C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1629404915A264BE00E4A8C4 /* Card Snap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1629404815A264BE00E4A8C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1629405915A264BF00E4A8C4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1629404615A264BE00E4A8C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1629405B15A264BF00E4A8C4 /* main.m in Sources */,
+				1629405F15A264BF00E4A8C4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1629405715A264BF00E4A8C4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1629405815A264BF00E4A8C4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1629406015A264BF00E4A8C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1629406115A264BF00E4A8C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1629406315A264BF00E4A8C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Card Snap/Card Snap-Prefix.pch";
+				INFOPLIST_FILE = "Card Snap/Card Snap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1629406415A264BF00E4A8C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Card Snap/Card Snap-Prefix.pch";
+				INFOPLIST_FILE = "Card Snap/Card Snap-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1629404415A264BE00E4A8C4 /* Build configuration list for PBXProject "Card Snap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1629406015A264BF00E4A8C4 /* Debug */,
+				1629406115A264BF00E4A8C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1629406215A264BF00E4A8C4 /* Build configuration list for PBXNativeTarget "Card Snap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1629406315A264BF00E4A8C4 /* Debug */,
+				1629406415A264BF00E4A8C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1629404115A264BE00E4A8C4 /* Project object */;
+}
