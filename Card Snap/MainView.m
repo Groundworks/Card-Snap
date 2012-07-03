@@ -65,9 +65,7 @@
         
         CGFloat diff = (view.center.y - yoffset - height/2.0)/height;
         CGFloat scale = expf(-diff*diff);
-        
-        NSLog(@"%.2f,%.2f",view.center.y,yoffset);
-        
+                
         // Core Animation - Affine Transformation
         CATransform3D resize = CATransform3DMakeScale(scale, scale, scale);
         
