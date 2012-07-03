@@ -33,10 +33,10 @@
         cardWidth  = cardView.view.bounds.size.width;
         
         [cardView.view setFrame:CGRectMake(0.0, 
-                self.view.bounds.size.height/2.0+
-                cardHeight/2.0, 
-                cardWidth,
-                cardHeight)];
+                    self.view.bounds.size.height/2.0+
+                    cardHeight/2.0, 
+                    cardWidth,
+                    cardHeight)];
         [cards      addObject  :cardView];
         [scrollView addSubview :cardView.view];
 
@@ -50,7 +50,6 @@
 {
     // The offset moves in response to a drag or flick gesture
     CGPoint offset = [sv contentOffset];
-    CGFloat yoffset = offset.y;
     
     CGFloat width  = sv.bounds.size.width;
     CGFloat height = sv.bounds.size.height;
@@ -64,7 +63,7 @@
         UIView  *view  = cardView.view;
         CALayer *layer = view.layer;
         
-        CGFloat diff  = (view.center.y - yoffset - height/2.0) / height;
+        CGFloat diff  = (view.center.y - offset.y - height/2.0) / height;
         CGFloat scale = expf(-diff*diff);
                 
         // Core Animation - Affine Transformation
