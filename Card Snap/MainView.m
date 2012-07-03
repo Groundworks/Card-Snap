@@ -19,4 +19,12 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    CGFloat  width = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height;
+    
+    [scrollView setContentSize:CGSizeMake(width, height*10)];
+}
+
 @end
