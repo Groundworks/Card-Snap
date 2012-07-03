@@ -25,11 +25,11 @@
         NSLog(@"Touched");
         
         UIActionSheet *actionSheet = 
-        [[UIActionSheet alloc] initWithTitle:@"Bob Smith" 
+        [[UIActionSheet alloc] initWithTitle:nil
                                     delegate:self 
-                           cancelButtonTitle:@"Cancel Button" 
-                      destructiveButtonTitle:@"Destructive Button" 
-                           otherButtonTitles:@"Other Button 1", @"Other Button 2", nil];
+                           cancelButtonTitle:@"Cancel"
+                      destructiveButtonTitle:nil
+                           otherButtonTitles:@"Phone",@"Email",@"SMS",nil];
         [actionSheet setActionSheetStyle:UIActionSheetStyleBlackOpaque];
         [actionSheet showInView:self.view.superview];
 
