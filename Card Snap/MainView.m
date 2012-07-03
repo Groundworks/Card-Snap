@@ -64,7 +64,7 @@
         UIView  *view  = cardView.view;
         CALayer *layer = view.layer;
         
-        CGFloat diff  = (view.center.y - offset.y - height/2.0) / height;
+        CGFloat diff  = (view.center.y - offset.y - 100.0) / height;
         CGFloat scale = expf(-diff*diff);
                 
         // Core Animation - Affine Transformation
