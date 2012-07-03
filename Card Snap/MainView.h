@@ -10,7 +10,7 @@
 
 @interface MainView : UIViewController
 {
-    IBOutlet UIView *cardView;
+    IBOutlet UIScrollView *scrollView;
 }
 
 @end
