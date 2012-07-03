@@ -24,7 +24,7 @@
     CGFloat  width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
     
-    [scrollView setContentSize:CGSizeMake(width, height*10)];
+    [scrollView setContentSize:CGSizeMake(width, height*2)];
 }
 
 @end
