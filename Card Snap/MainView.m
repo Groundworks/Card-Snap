@@ -50,7 +50,7 @@
     
     // Redraw the frame
     // Note: this does not scale the card
-    CGRect target = CGRectMake(cardWidthOffset, heightOffset, cardWidth, cardHeight);
+    CGRect target = CGRectMake(cardWidthOffset, heightOffset-cardHeight/2.0, cardWidth, cardHeight);
     [card setFrame:target];
     
 }
