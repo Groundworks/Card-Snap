@@ -19,4 +19,13 @@
     return self;
 }
 
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    for(UITouch *touch in touches)
+    {
+        CGPoint touchPoint = [touch locationInView:[self view]];
+        [cardView setCenter:touchPoint];
+    }
+}
+
 @end
