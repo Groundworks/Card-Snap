@@ -22,9 +22,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     CGFloat  width = self.view.bounds.size.width;
-    CGFloat height = self.view.bounds.size.height;
-    
-    [scrollView setContentSize:CGSizeMake(width, height*2)];
     
     cards = [[NSMutableArray alloc]init];
     for(int i=0; i<10; i++)
@@ -44,6 +41,8 @@
 
     }
     
+    [scrollView setContentSize:CGSizeMake(width, cardHeight*11)];
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sv
@@ -51,25 +50,29 @@
     // The offset moves in response to a drag or flick gesture
     CGPoint offset = [sv contentOffset];
     
+    CGFloat width  = sv.bounds.size.width;
     CGFloat height = sv.bounds.size.height;
-    CGFloat center = height/2.0;
-    CGFloat cdiff  = abs(center-offset.y);
     
-    // Use trigonometric functions to scale card views
-    CGFloat pdiff  = 1-(height-cdiff)/height;
-    CGFloat pacing = 0.88;
-    CGFloat scale  = cos(pacing*pdiff*M_PI);
-    
-    // Core Animation - Affine Transformation
-    CATransform3D resize = CATransform3DMakeScale(scale, scale, scale);
+    CGFloat yoffset = offset.y;
     
     int ncards = [cards count];
     for(int i=0; i<ncards; i++)
-    {
-        UIViewController  *cardView  = [cards objectAtIndex:i];
-        CALayer *cardLayer = cardView.view.layer;
+    {   
         
-        [cardLayer setTransform:resize];
+        UIViewController  *cardView  = [cards objectAtIndex:i];
+        UIView  *view  = cardView.view;
+        CALayer *layer = view.layer;
+        
+        CGFloat diff = (view.center.y - yoffset - height/2.0)/height;
+        CGFloat scale = expf(-diff*diff);
+        
+        NSLog(@"%.2f,%.2f",view.center.y,yoffset);
+        
+        // Core Animation - Affine Transformation
+        CATransform3D resize = CATransform3DMakeScale(scale, scale, scale);
+        
+        [view setCenter:CGPointMake(width/2.0, (cardHeight)*(i+1))];
+        [layer setTransform:resize];
     }
 
 }
