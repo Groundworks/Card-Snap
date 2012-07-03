@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Card.h"
 
 @interface MainView : UIViewController <UIScrollViewDelegate>
 {
     IBOutlet UIScrollView *scrollView;
-    IBOutlet UIView *card;
+    Card *card;
+    
+    CGFloat cardWidth;
+    CGFloat cardHeight;
 }
 
 @end

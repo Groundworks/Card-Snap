@@ -25,6 +25,20 @@
     CGFloat height = self.view.bounds.size.height;
     
     [scrollView setContentSize:CGSizeMake(width, height*2)];
+    
+    card = [[Card alloc]initWithNibName:nil bundle:nil];
+    
+    cardHeight = card.view.bounds.size.height;
+    cardWidth  = card.view.bounds.size.width;
+    
+    [card.view setFrame:CGRectMake(0.0, 
+                                   self.view.bounds.size.height/2.0+
+                                   cardHeight/2.0, 
+                                   cardWidth,
+                                   cardHeight)];
+    
+    [scrollView addSubview:card.view];
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sv
@@ -32,32 +46,21 @@
     // The offset moves in response to a drag or flick gesture
     CGPoint offset = [sv contentOffset];
 
-    CGFloat width  = sv.bounds.size.width;
     CGFloat height = sv.bounds.size.height;
     CGFloat center = height/2.0;
     CGFloat cdiff  = abs(center-offset.y);
     
-    CGFloat heightOffset = height-offset.y;
-    
     // Logistic Function ( http://en.wikipedia.org/wiki/Logistic_function )
-    CGFloat pdiff   = 1-(height-cdiff)/height;
-    CGFloat pacing  = 0.85;
-    CGFloat degrees = pacing*pdiff*M_PI;
-    CGFloat scale   = cos(degrees);
+    CGFloat pdiff  = 1-(height-cdiff)/height;
+    CGFloat pacing = 0.88;
+    CGFloat scale  = cos(pacing*pdiff*M_PI);
     
-    // The card should scale in size
-    CGFloat cardWidth  = width * scale;
-    CGFloat cardHeight = sv.bounds.size.height/3.0 * scale;
-    
-    // The card frame is calculated according to top-left corner
-    // we need to determine where that should be based on the scale.
-    CGFloat cardWidthOffset = (width - cardWidth)/2;
-    
-    // Redraw the frame
-    // Note: this does not scale the card
-    CGRect target = CGRectMake(cardWidthOffset, heightOffset-cardHeight/2.0, cardWidth, cardHeight);
-    [card setFrame:target];
-    
+    CGRect bounds = card.view.layer.bounds;
+    [card.view.layer setBounds:CGRectMake(bounds.origin.x, 
+                                     bounds.origin.y, 
+                                     cardWidth  * scale, 
+                                     cardHeight * scale)];
+
 }
 
 @end
