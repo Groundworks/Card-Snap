@@ -15,8 +15,7 @@
     IBOutlet UIScrollView *scrollView;
     
     NSMutableArray *cards;
-    
-    Card *card;
+    int ncards;
     
     CGFloat cardWidth;
     CGFloat cardHeight;

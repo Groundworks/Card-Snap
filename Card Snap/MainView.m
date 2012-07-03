@@ -24,8 +24,9 @@
     CGFloat width = self.view.bounds.size.width;
     
     cards = [[NSMutableArray alloc]init];
+    ncards = 10;
     
-    for(int i=0; i<10; i++)
+    for(int i=0; i<ncards; i++)
     {
         Card *cardView = [[Card alloc]initWithNibName:nil bundle:nil];
         
@@ -42,7 +43,7 @@
 
     }
     
-    [scrollView setContentSize:CGSizeMake(width, cardHeight*11)];
+    [scrollView setContentSize:CGSizeMake(width, cardHeight*(ncards+1))];
     
 }
 
@@ -54,8 +55,8 @@
     CGFloat width  = sv.bounds.size.width;
     CGFloat height = sv.bounds.size.height;
     
-    int ncards = [cards count];
-    for(int i=0; i<ncards; i++)
+    int cardCount = [cards count];
+    for(int i=0; i<cardCount; i++)
     {   
         
         UIViewController
