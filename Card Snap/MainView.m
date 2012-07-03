@@ -55,11 +55,9 @@
     CGFloat pacing = 0.88;
     CGFloat scale  = cos(pacing*pdiff*M_PI);
     
-    CGRect bounds = card.view.layer.bounds;
-    [card.view.layer setBounds:CGRectMake(bounds.origin.x, 
-                                     bounds.origin.y, 
-                                     cardWidth  * scale, 
-                                     cardHeight * scale)];
+    CATransform3D resize = CATransform3DMakeScale(scale, scale, scale);
+    
+    [card.view.layer setTransform:resize];
 
 }
 
