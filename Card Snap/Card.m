@@ -32,6 +32,9 @@
                            otherButtonTitles:@"Phone",@"Email",@"SMS",nil];
         [actionSheet setActionSheetStyle:UIActionSheetStyleBlackOpaque];
         [actionSheet showInView:self.view.superview];
+        
+        UIScrollView *scrollView = self.view.superview;
+        [scrollView setContentOffset:CGPointMake(0.0, self.view.center.y - scrollView.window.bounds.size.height/2.0) animated:YES];
 
     }
     [super touchesBegan:touches withEvent:event];
