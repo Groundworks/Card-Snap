@@ -29,13 +29,29 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)sv
 {
-    CGFloat width  = self.view.bounds.size.width;
-    CGFloat height = self.view.bounds.size.height;
-    
+    // The offset moves in response to a drag or flick gesture
     CGPoint offset = [sv contentOffset];
-    CGPoint target = CGPointMake(width/2.0, sv.contentSize.height - offset.y - height/2.0);
+
+    CGFloat width  = sv.bounds.size.width;
+    CGFloat height = sv.bounds.size.height;
     
-    [card setCenter:target];
+    CGFloat heightOffset = height-offset.y;
+    
+    // Logistic Function ( http://en.wikipedia.org/wiki/Logistic_function )
+    CGFloat scale = 1/(1+exp(-heightOffset/height));
+    
+    // The card should scale in size
+    CGFloat cardWidth  = width * scale;
+    CGFloat cardHeight = sv.bounds.size.height/3.0 * scale;
+    
+    // The card frame is calculated according to top-left corner
+    // we need to determine where that should be based on the scale.
+    CGFloat cardWidthOffset = (width - cardWidth)/2;
+    
+    // Redraw the frame
+    // Note: this does not scale the card
+    CGRect target = CGRectMake(cardWidthOffset, heightOffset, cardWidth, cardHeight);
+    [card setFrame:target];
     
 }
 
