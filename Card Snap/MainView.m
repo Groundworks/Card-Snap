@@ -45,18 +45,18 @@
 {
     // The offset moves in response to a drag or flick gesture
     CGPoint offset = [sv contentOffset];
-
+    
     CGFloat height = sv.bounds.size.height;
     CGFloat center = height/2.0;
     CGFloat cdiff  = abs(center-offset.y);
     
-    // Logistic Function ( http://en.wikipedia.org/wiki/Logistic_function )
+    // Use trigonometric functions to scale card views
     CGFloat pdiff  = 1-(height-cdiff)/height;
     CGFloat pacing = 0.88;
     CGFloat scale  = cos(pacing*pdiff*M_PI);
     
+    // Core Animation - Affine Transformation
     CATransform3D resize = CATransform3DMakeScale(scale, scale, scale);
-    
     [card.view.layer setTransform:resize];
 
 }
