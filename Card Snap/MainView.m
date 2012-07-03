@@ -27,4 +27,16 @@
     [scrollView setContentSize:CGSizeMake(width, height*2)];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)sv
+{
+    CGFloat width  = self.view.bounds.size.width;
+    CGFloat height = self.view.bounds.size.height;
+    
+    CGPoint offset = [sv contentOffset];
+    CGPoint target = CGPointMake(width/2.0, sv.contentSize.height - offset.y - height/2.0);
+    
+    [card setCenter:target];
+    
+}
+
 @end

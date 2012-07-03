@@ -11,6 +11,7 @@
 @interface MainView : UIViewController <UIScrollViewDelegate>
 {
     IBOutlet UIScrollView *scrollView;
+    IBOutlet UIView *card;
 }
 
 @end
