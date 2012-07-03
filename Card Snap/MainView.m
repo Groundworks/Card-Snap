@@ -21,10 +21,15 @@
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    CGFloat  width = self.view.bounds.size.width;
+    CGFloat center = width/2.0;
+
     for(UITouch *touch in touches)
     {
-        CGPoint touchPoint = [touch locationInView:[self view]];
-        [cardView setCenter:touchPoint];
+        CGPoint  touchPoint = [touch locationInView:[self view]];
+        CGPoint targetPoint = CGPointMake(center, touchPoint.y);
+        
+        [cardView setCenter:targetPoint];
     }
 }
 
