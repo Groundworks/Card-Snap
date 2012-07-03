@@ -34,11 +34,16 @@
 
     CGFloat width  = sv.bounds.size.width;
     CGFloat height = sv.bounds.size.height;
+    CGFloat center = height/2.0;
+    CGFloat cdiff  = abs(center-offset.y);
     
     CGFloat heightOffset = height-offset.y;
     
     // Logistic Function ( http://en.wikipedia.org/wiki/Logistic_function )
-    CGFloat scale = 1/(1+exp(-heightOffset/height));
+    CGFloat pdiff   = 1-(height-cdiff)/height;
+    CGFloat pacing  = 0.85;
+    CGFloat degrees = pacing*pdiff*M_PI;
+    CGFloat scale   = cos(degrees);
     
     // The card should scale in size
     CGFloat cardWidth  = width * scale;
