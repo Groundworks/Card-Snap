@@ -26,18 +26,23 @@
     
     [scrollView setContentSize:CGSizeMake(width, height*2)];
     
-    card = [[Card alloc]initWithNibName:nil bundle:nil];
-    
-    cardHeight = card.view.bounds.size.height;
-    cardWidth  = card.view.bounds.size.width;
-    
-    [card.view setFrame:CGRectMake(0.0, 
-                                   self.view.bounds.size.height/2.0+
-                                   cardHeight/2.0, 
-                                   cardWidth,
-                                   cardHeight)];
-    
-    [scrollView addSubview:card.view];
+    cards = [[NSMutableArray alloc]init];
+    for(int i=0; i<10; i++)
+    {
+        Card *cardView = [[Card alloc]initWithNibName:nil bundle:nil];
+        
+        cardHeight = cardView.view.bounds.size.height;
+        cardWidth  = cardView.view.bounds.size.width;
+        
+        [cardView.view setFrame:CGRectMake(0.0, 
+                                       self.view.bounds.size.height/2.0+
+                                       cardHeight/2.0, 
+                                       cardWidth,
+                                       cardHeight)];
+        [cards addObject:cardView];
+        [scrollView addSubview:cardView.view];
+
+    }
     
 }
 
@@ -57,7 +62,15 @@
     
     // Core Animation - Affine Transformation
     CATransform3D resize = CATransform3DMakeScale(scale, scale, scale);
-    [card.view.layer setTransform:resize];
+    
+    int ncards = [cards count];
+    for(int i=0; i<ncards; i++)
+    {
+        UIViewController  *cardView  = [cards objectAtIndex:i];
+        CALayer *cardLayer = cardView.view.layer;
+        
+        [cardLayer setTransform:resize];
+    }
 
 }
 

@@ -13,6 +13,9 @@
 @interface MainView : UIViewController <UIScrollViewDelegate>
 {
     IBOutlet UIScrollView *scrollView;
+    
+    NSMutableArray *cards;
+    
     Card *card;
     
     CGFloat cardWidth;
