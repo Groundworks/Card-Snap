@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Card : UIViewController
+@interface Card : UIViewController < UIActionSheetDelegate >
 
 @end

@@ -19,4 +19,22 @@
     return self;
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (event.type==UIEventTypeTouches){
+        NSLog(@"Touched");
+        
+        UIActionSheet *actionSheet = 
+        [[UIActionSheet alloc] initWithTitle:@"Bob Smith" 
+                                    delegate:self 
+                           cancelButtonTitle:@"Cancel Button" 
+                      destructiveButtonTitle:@"Destructive Button" 
+                           otherButtonTitles:@"Other Button 1", @"Other Button 2", nil];
+        [actionSheet setActionSheetStyle:UIActionSheetStyleBlackOpaque];
+        [actionSheet showInView:self.view.superview];
+
+    }
+    [super touchesBegan:touches withEvent:event];
+}
+
 @end
